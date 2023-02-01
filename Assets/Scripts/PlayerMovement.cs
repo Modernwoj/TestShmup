@@ -68,8 +68,8 @@ public class PlayerMovement : MonoBehaviour
             pos.y += moveSpeed * Time.fixedDeltaTime;
         if (moveDown)
             pos.y -= moveSpeed * Time.fixedDeltaTime;
-        if (pos.y > 4f) pos.y = 4f;
-        if (pos.y < -4f) pos.y = -4f;
+        if (pos.y > GameManager.yBounds) pos.y = GameManager.yBounds;
+        if (pos.y < -GameManager.yBounds) pos.y = -GameManager.yBounds;
         transform.position = pos;
     }
 

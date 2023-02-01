@@ -11,13 +11,14 @@ public class SpawnerController : MonoBehaviour
     [SerializeField]
     private List<Sprite> enemySprites;
     private int lanes = 5;
-    private float laneOffset = 2;
+    private float laneOffset;
     private List<Vector2> spawnCoordinates;
     private IEnumerator coroutine;
 
     // Start is called before the first frame update
     void Awake()
     {
+        laneOffset = GameManager.yBounds / (lanes - 1) * 2;
         InitSpawners();
     }
     private void OnEnable()

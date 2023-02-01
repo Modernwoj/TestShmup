@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
+    public static float yBounds = 4;
     public int highscore = 0;
     public float roundTime = 60f; //5min in seconds as baseline
     public enum gameState
